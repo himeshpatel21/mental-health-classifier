@@ -28,9 +28,9 @@ Evaluated on a held-out test set never seen during training.
 
 | Metric | Score |
 |--------|-------|
-| Accuracy | — |
-| F1 Score | — |
-| AUC-ROC | — |
+| Accuracy | 0.9160 |
+| F1 Score | 0.9172 |
+| AUC-ROC | 0.9759 |
 
 > Fill in your scores from the `classification_report` output in the notebook.
 
@@ -62,8 +62,6 @@ The base model (MentalBERT) was pre-trained on mental health-specific Reddit and
 
 **Mental-Health-Twitter** — a labelled collection of tweets annotated for mental health distress signals.
 
-![Dataset EDA](assets/dataset_eda.png)
-
 Key observations from EDA:
 - 95th percentile tweet length is under 50 words → max_length=128 covers the dataset well
 - Binary labels with moderate class imbalance (explored in notebook)
@@ -76,15 +74,14 @@ Key observations from EDA:
 mental-health-classifier/
 │
 ├── notebook/
-│   └── mental_health_final.ipynb   # Full training notebook (Colab-ready)
+│   └── mental_health_main.ipynb   # Full training notebook (Colab-ready)
 │
 ├── research/
-│   └── RESEARCH_JOURNEY.md         # Thinking process, experiments, learnings
+│   └── thought_process.md         # Thinking process, experiments, learnings
 │
 ├── assets/
 │   ├── pipeline_flow.png
 │   ├── sample_predictions.png
-│   ├── dataset_eda.png
 │   └── app_screenshot.png
 │
 ├── app.py                          # Streamlit app (deployed on HF Spaces)
@@ -97,7 +94,7 @@ mental-health-classifier/
 ## Run Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mental-health-classifier
+git clone https://github.com/himeshpatel21/mental-health-classifier
 cd mental-health-classifier
 pip install -r requirements.txt
 streamlit run app.py
@@ -111,12 +108,10 @@ The app loads the model directly from Hugging Face Hub — no local model downlo
 
 The notebook is designed for **Google Colab with GPU** (T4 or better).
 
-1. Open via the badge above or upload `notebook/mental_health_final.ipynb` to Colab
+1. Open via the badge above or upload `notebook/mental_health_main.ipynb` to Colab
 2. Set runtime → T4 GPU
 3. Add your `HF_TOKEN` to Colab Secrets
 4. Run all cells top to bottom
-
-Training takes ~15–20 minutes on a T4.
 
 ---
 
@@ -124,7 +119,7 @@ Training takes ~15–20 minutes on a T4.
 
 Curious about the reasoning behind model choice, tokenizer decisions, and what I tried before getting here?
 
-→ Read [`research/RESEARCH_JOURNEY.md`](research/RESEARCH_JOURNEY.md)
+→ Read [`research/thought_process.md`](research/thought_process.md)
 
 ---
 
