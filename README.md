@@ -12,7 +12,7 @@ Fine-tuned **MentalBERT** classifier that detects mental health distress signals
 
 > Try it directly on Hugging Face Spaces — no setup needed.
 
-[![App Screenshot](assets/app_screenshot.png)](https://huggingface.co/spaces/wizardpatel/mental-health-classifier)
+[![App Screenshot](assests/app_screenshot.png)](https://huggingface.co/spaces/wizardpatel/mental-health-classifier)
 
 ---
 
