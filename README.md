@@ -18,7 +18,7 @@ Fine-tuned **MentalBERT** classifier that detects mental health distress signals
 
 ## Pipeline
 
-![Pipeline Flow](assets/pipeline_flow.png)
+![Pipeline Flow](assests/pipeline_flow.png)
 
 ---
 
@@ -31,12 +31,6 @@ Evaluated on a held-out test set never seen during training.
 | Accuracy | 0.9160 |
 | F1 Score | 0.9172 |
 | AUC-ROC | 0.9759 |
-
-> Fill in your scores from the `classification_report` output in the notebook.
-
-### Sample predictions
-
-![Sample Predictions](assets/sample_predictions.png)
 
 ---
 
@@ -81,7 +75,6 @@ mental-health-classifier/
 │
 ├── assets/
 │   ├── pipeline_flow.png
-│   ├── sample_predictions.png
 │   └── app_screenshot.png
 │
 ├── app.py                          # Streamlit app (deployed on HF Spaces)
