@@ -1,6 +1,8 @@
 transformers>=4.43.0
 tokenizers>=0.20.0
 torch>=2.5.0
-streamlit>=1.35.0
+shap>=0.45.0
 numpy
 scikit-learn
+streamlit>=1.35.0
+matplotlib>=3.7.0
